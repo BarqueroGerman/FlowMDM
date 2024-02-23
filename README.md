@@ -1,5 +1,3 @@
-# FlowMDM
-
 <h1 align="center">FlowMDM</h3>
 
 <h3 align="center">Seamless Human Motion Composition with Blended Positional Encodings</h3>
