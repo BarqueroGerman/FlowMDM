@@ -12,11 +12,11 @@
   </p>
 
 
-<!--
-<p align="center">
-    <img src="assets/video.gif" align="center" width=60% >
-</p>
--->
+<br>
+
+Human Motion Composition             |  Human Motion Extrapolation
+:-------------------------:|:-------------------------:
+![](assets/example_composition.gif)  |  ![](assets/example_extrapolation.gif)
 
 
 ## About
@@ -36,6 +36,7 @@ Instead, we address the generation of long, continuous sequences guided by a ser
 - [2024-02-26] Our paper is available in [Arxiv](TBA). Code and model weights will be released soon!
 
 ## TODO List
+- [x] Release paper.
 - [ ] Release code.
 - [ ] Release pretrained models.
 - [ ] Release visualization code.
