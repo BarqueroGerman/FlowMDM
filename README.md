@@ -4,8 +4,8 @@
 
   <p align="center">
     <a href="https://barquerogerman.github.io/FlowMDM/"><img alt="Project" src="https://img.shields.io/badge/-Project%20Page-lightgrey?logo=Google%20Chrome&color=informational&logoColor=white"></a>
-    <a href="TBA"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-0000.00000-b31b1b.svg"></a> 
-    <a href="TBA"><img alt="visits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBarqueroGerman%2FFlowMDM&count_bg=%2320AF15&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false"></a>
+    <a href="https://arxiv.org/abs/2402.15509"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2402.15509-b31b1b.svg"></a> 
+    <img alt="visits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBarqueroGerman%2FFlowMDM&count_bg=%2320AF15&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false">
     <br>
     <br>
     <b>-----------> Code will be released soon <----------</b>
@@ -33,7 +33,7 @@ Instead, we address the generation of long, continuous sequences guided by a ser
 -->
 
 ## News
-- [2024-02-26] Our paper is available in [Arxiv](TBA). Code and model weights will be released soon!
+- [2024-02-26] Our paper is available in [Arxiv](https://arxiv.org/abs/2402.15509). Code and model weights will be released soon!
 
 ## TODO List
 - [x] Release paper.
