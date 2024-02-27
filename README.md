@@ -1,6 +1,6 @@
 <h1 align="center">FlowMDM</h3>
 
-<h3 align="center">Seamless Human Motion Composition with Blended Positional Encodings</h3>
+<h3 align="center">Seamless Human Motion Composition with Blended Positional Encodings (CVPR'24)</h3>
 
   <p align="center">
     <a href="https://barquerogerman.github.io/FlowMDM/"><img alt="Project" src="https://img.shields.io/badge/-Project%20Page-lightgrey?logo=Google%20Chrome&color=informational&logoColor=white"></a>
@@ -33,6 +33,7 @@ Instead, we address the generation of long, continuous sequences guided by a ser
 -->
 
 ## News
+- [2024-02-27] FlowMDM is now accepted at CVPR 2024!
 - [2024-02-26] Our paper is available in [Arxiv](https://arxiv.org/abs/2402.15509). Code and model weights will be released soon!
 
 ## TODO List
@@ -49,7 +50,7 @@ If you find our work helpful, please cite:
 @inproceedings{barquero2024seamless,
   title={Seamless Human Motion Composition with Blended Positional Encodings},
   author={Barquero, German and Escalera, Sergio and Palmero, Cristina},
-  booktitle={arXiv},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2024}
 }
 ```
