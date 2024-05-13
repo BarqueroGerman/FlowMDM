@@ -40,13 +40,13 @@ cp -r ../HumanML3D/HumanML3D ./dataset/HumanML3D
 To generate examples of human motion compositions with Babel model run:
 
 ```bash
-python -m runners.generate --model_path ./results/babel/FlowMDM/model001300000.pt --num_repetitions 1 --bpe_denoising_step 60 --guidance_param 1.5 --instructions_file ./runners/jsons/composition_babel.json
+python -m runners.generate --model_path ./results/babel/FlowMDM/model001300000.pt --num_repetitions 1 --bpe_denoising_step 125 --guidance_param 1.5 --instructions_file ./runners/jsons/composition_babel.json
 ```
 
 To generate examples of human motion compositions with HumanML3D model run:
 
 ```bash
-python -m runners.generate --model_path ./results/humanml/FlowMDM/model000500000.pt --num_repetitions 1 --bpe_denoising_step 125 --guidance_param 2.5 --instructions_file ./runners/jsons/composition_humanml.json --use_chunked_att
+python -m runners.generate --model_path ./results/humanml/FlowMDM/model000500000.pt --num_repetitions 1 --bpe_denoising_step 60 --guidance_param 2.5 --instructions_file ./runners/jsons/composition_humanml.json --use_chunked_att
 ```
 
 If you have downloaded the datasets, you can replace `--instructions_file FILE` with `--num_samples N` to randomly sample N textual descriptions and lengths from the datasets.
@@ -58,6 +58,8 @@ Add `--use_chunked_att` to accelerate inference for very long compositions (reco
 It will look something like this:
 
 ![example](../assets/mp4_example.gif)
+
+Tuning the `--bpe_denoising_step` will change the smoothness of the generated motion. With higher values (up to 1000), the quality of each action increases, in exchange for more abrupt and less realistic transitions between actions. Fig. 5 in the paper studies this trade-off.
 
 ### Render SMPL mesh (thanks to MDM project)
 
@@ -92,13 +94,13 @@ python -m runners.render_mesh --input_path /path/to/mp4/stick/figure/file
 To reproduce the Babel evaluation over the motion and transition run:
 
 ```bash
-python -m runners.eval --model_path ./results/babel/FlowMDM/model001300000.pt --dataset babel --eval_mode final --bpe_denoising_step 60 --guidance_param 1.5 --transition_length 30
+python -m runners.eval --model_path ./results/babel/FlowMDM/model001300000.pt --dataset babel --eval_mode final --bpe_denoising_step 125 --guidance_param 1.5 --transition_length 30
 ```
 
 To reproduce the HumanML3D evaluation over the motion and transition run:
 
 ```bash
-python -m runners.eval --model_path ./results/humanml/FlowMDM/model000500000.pt --dataset humanml --eval_mode final --bpe_denoising_step 125 --guidance_param 2.5 --transition_length 60 --use_chunked_att
+python -m runners.eval --model_path ./results/humanml/FlowMDM/model000500000.pt --dataset humanml --eval_mode final --bpe_denoising_step 60 --guidance_param 2.5 --transition_length 60 --use_chunked_att
 ```
 
 Add `--use_chunked_att` to accelerate inference for very long compositions (imported from LongFormer, and recommended for HumanML3D). Evaluation can take >12h for the 10 repetitions depending on the GPU power. Use `--eval_mode fast` for a quick evaluation run (3 rep.). 

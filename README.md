@@ -29,6 +29,7 @@ Instead, we address the generation of long, continuous sequences guided by a ser
 -->
 
 ## 📌 News
+- [2024-05-13] Eval/Gen instructions updated (wrong value in --bpe_denoising_step fixed)
 - [2024-03-18] Code + model weights released!
 - [2024-02-27] FlowMDM is now accepted at CVPR 2024!
 - [2024-02-26] Our paper is available in [Arxiv](https://arxiv.org/abs/2402.15509).
