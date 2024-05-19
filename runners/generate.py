@@ -17,6 +17,10 @@ from data_loaders.humanml.utils.plot_script import plot_3d_motion_mix
 import json
 from diffusion.diffusion_wrappers import DiffusionWrapper_FlowMDM as DiffusionWrapper
 
+from visualization.joints2bvh import Joint2BVHConvertor
+
+converter = Joint2BVHConvertor()
+
 datasets_fps = {
     "humanml": 20,
     "babel": 30
@@ -188,6 +192,9 @@ def main():
             save_file = sample_file_template.format(rep_i)
             print(sample_print_template.format(rep_i, save_file))
             animation_save_path = os.path.join(animation_out_path, save_file)
+            # saving motion as BVH
+            bvh_path = os.path.join(animation_out_path, "motion.bvh")
+            _, _ = converter.convert(motion, filename=bvh_path, iterations=1000, foot_ik=False)
             lengths_list = model_kwargs['y']['lengths']
             captions_list = []
             for c, l in zip(caption.split(" /// "), lengths_list):
