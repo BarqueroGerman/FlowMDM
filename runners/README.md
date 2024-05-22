@@ -114,11 +114,14 @@ Add `--use_chunked_att` to accelerate inference for very long compositions (impo
 To retrain FlowMDM with Babel dataset run:
 
 ```bash
-python -m runners.train --save_dir ./results/babel/FlowMDM_retrained --dataset babel --batch_size 64 --num_steps 1300000 --rpe_horizon 100
+python -m runners.train --save_dir ./results/babel/FlowMDM_retrained --dataset babel --batch_size 64 --num_steps 1500000 --min_seq_len 45 --max_seq_len 250 --rpe_horizon 100
 ```
 
 To retrain FlowMDM with HumanML3D dataset run:
 
 ```bash
-python -m runners.train --save_dir ./results/humanml/FlowMDM_retrained --dataset humanml --batch_size 64 --num_steps 500000 --rpe_horizon 150
+python -m runners.train --save_dir ./results/humanml/FlowMDM_retrained --dataset humanml --batch_size 64 --num_steps 600000 --rpe_horizon 150 
 ```
+
+> [!NOTE]
+> Even though the models released were trained for 1.3M steps (Babel) and 500k steps (HumanML3D), we observed that the random initialization and the BPE-training randomness might lead to slightly different evaluation values when re-training the models. In this case, best performance might be achieved 50-100k steps before or after the 1.3M/500k steps. See [this issue](https://github.com/BarqueroGerman/FlowMDM/issues/10) for more information.
